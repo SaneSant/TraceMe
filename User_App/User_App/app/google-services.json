@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1067147148753",
+    "project_id": "traceme-67039",
+    "storage_bucket": "traceme-67039.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067147148753:android:e7c105bcb428c1db9834f0",
+        "android_client_info": {
+          "package_name": "com.company.traceme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067147148753-k3116jder7kb0v4l7iheg3qbgejpkdk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9zDTxdSwdTOcpLv7VRTOg7LKV_6SY1Vs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067147148753-k3116jder7kb0v4l7iheg3qbgejpkdk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

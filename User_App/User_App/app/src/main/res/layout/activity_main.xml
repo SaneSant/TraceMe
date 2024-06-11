@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="#F6F5F5"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:background="@color/purple_700"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/displayuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:text=""
+        android:layout_marginBottom="36dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size_20"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imguser"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="36dp"
+        android:src="@drawable/passenger"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardCornerRadius="26dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:layout_editor_absoluteX="20dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Short View"
+                android:textColor="@color/purple_700"
+                android:textSize="14sp"
+
+                android:elevation="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/bus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Buses"
+                    android:textColor="@color/purple_700"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/buscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_b"
+                    android:text="0"
+                    android:textColor="@color/gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginRight="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/textview">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/man" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Users"
+                    android:textColor="@color/purple_700"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/usercount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_b"
+                    android:text="0"
+                    android:textColor="@color/gray" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       android:gravity="center"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+        <LinearLayout
+            android:id="@+id/ll_firstcoureses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_dashboard"
+
+            android:layout_marginRight="@dimen/horizontal_dashboard"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/buslocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/horizontal_card"
+                android:layout_marginEnd="@dimen/horizontal_card"
+                android:layout_marginRight="@dimen/horizontal_card"
+                android:background="@drawable/round_bk2"
+                android:layout_marginBottom="@dimen/horizontal_card"
+                android:layout_weight="1"
+                android:elevation="28dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="2dp"
+
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:id="@+id/busloc"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/card_view_image"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/busl" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normalPadding"
+                        android:layout_marginTop="@dimen/top_text_card"
+
+                        android:layout_marginRight="@dimen/normalPadding"
+
+
+                        android:fontFamily="@font/poppins_b"
+                        android:text="Bus\nLocation"
+                        android:textColor="@color/purple_700"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normalPadding"
+                        android:layout_marginTop="@dimen/top_text_subtitle_card"
+
+                        android:layout_marginRight="@dimen/normalPadding"
+                        android:layout_marginBottom="@dimen/normalPadding"
+
+                        android:fontFamily="@font/r_l"
+
+                        android:text="View More"
+                        android:textColor="@color/gray"
+                        android:textSize="11sp" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/quiz02"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+android:visibility="gone"
+                android:layout_marginLeft="@dimen/horizontal_card"
+                android:layout_marginTop="@dimen/horizontal_card"
+                android:layout_marginBottom="@dimen/horizontal_card"
+
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_dashboard"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/horizontal_dashboard"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/ds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/horizontal_card"
+                android:layout_marginEnd="@dimen/horizontal_card"
+                android:layout_marginRight="@dimen/horizontal_card"
+                android:background="@drawable/round_bk2"
+                android:layout_marginBottom="@dimen/horizontal_card"
+                android:layout_weight="1"
+                android:elevation="28dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="2dp"
+
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:id="@+id/busdetails"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/im"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/bus_cat" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normalPadding"
+                        android:layout_marginTop="@dimen/top_text_card"
+
+                        android:layout_marginRight="@dimen/normalPadding"
+
+
+                        android:fontFamily="@font/poppins_b"
+                        android:text="Bus\nDetails"
+                        android:textColor="@color/purple_700"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normalPadding"
+                        android:layout_marginTop="@dimen/top_text_subtitle_card"
+
+                        android:layout_marginRight="@dimen/normalPadding"
+                        android:layout_marginBottom="@dimen/normalPadding"
+
+                        android:fontFamily="@font/r_l"
+
+                        android:text="View More"
+                        android:textColor="@color/gray"
+                        android:textSize="11sp" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/bis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="@dimen/horizontal_card"
+                android:layout_marginTop="@dimen/horizontal_card"
+                android:layout_marginBottom="@dimen/horizontal_card"
+
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:id="@+id/msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/margin_10dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/chatcat" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normalPadding"
+                        android:layout_marginTop="@dimen/top_text_card"
+
+                        android:layout_marginRight="@dimen/normalPadding"
+
+
+                        android:fontFamily="@font/poppins_b"
+                        android:text="Messages &amp; complaints"
+                        android:textColor="@color/purple_700"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normalPadding"
+                        android:layout_marginTop="@dimen/top_text_subtitle_card"
+                        android:layout_marginRight="@dimen/normalPadding"
+                        android:layout_marginBottom="@dimen/normalPadding"
+                        android:fontFamily="@font/r_l"
+                        android:text="View More"
+                        android:textColor="@color/gray"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
